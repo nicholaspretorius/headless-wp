@@ -17,6 +17,11 @@ const Header = () => {
           About
         </a>
       </Link>
+      <Link href="/data">
+        <a title="Data Page" style={linkStyle}>
+          Data
+        </a>
+      </Link>
       <Link href="/blog">
         <a title="Blog Page" style={linkStyle}>
           Blog
