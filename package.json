@@ -1,0 +1,25 @@
+{
+  "name": "headless",
+  "version": "0.0.1",
+  "description": "React/Next.js with Headless WordPress",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "test": "test"
+  },
+  "keywords": [
+    "React",
+    "Next.js",
+    "WordPress",
+    "REST-API"
+  ],
+  "author": "Nicholas Pretorius",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^9.3.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
