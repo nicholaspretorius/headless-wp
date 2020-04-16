@@ -17,6 +17,11 @@ const Header = () => {
           About
         </a>
       </Link>
+      <Link href="/blog">
+        <a title="Blog Page" style={linkStyle}>
+          Blog
+        </a>
+      </Link>
     </div>
   );
 };
