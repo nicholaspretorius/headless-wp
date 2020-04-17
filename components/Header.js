@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const linkStyle = {
-  marginRight: 15
+  marginRight: 15,
 };
 
 const Header = () => {
@@ -17,12 +17,7 @@ const Header = () => {
           About
         </a>
       </Link>
-      <Link href="/data">
-        <a title="Data Page" style={linkStyle}>
-          Data
-        </a>
-      </Link>
-      <Link href="/blog">
+      <Link href="/posts">
         <a title="Blog Page" style={linkStyle}>
           Blog
         </a>
