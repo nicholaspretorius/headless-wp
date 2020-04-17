@@ -14,7 +14,7 @@ const Posts = (props) => {
       <ul>
         {props.posts.map((post) => (
           <li key={post.id}>
-            <Link href="/posts/[slug]" as={`/posts/${post.slug}?id=${post.id} `}>
+            <Link href="/posts/[slug]" as={`/posts/${post.slug}`}>
               <a>{post.title.rendered}</a>
             </Link>
           </li>
