@@ -1,29 +1,29 @@
 import { useRouter } from "next/router";
 import Layout from "../../components/Layout";
 
-const api = process.env.WP_API;
+const wp = process.env.WP_API;
 const apiV = process.env.API_V;
-const url = `${api}${apiV}`;
-console.log("URL:", url);
+const api = `${wp}${apiV}`;
+console.log("Endpoint:", api);
 
 const Post = (props) => {
   const router = useRouter();
-  console.log("Router: ", router);
-  console.log("Post: ", props.post);
+  const { post } = props;
 
   return (
     <Layout>
-      <h1>{router.query.slug}</h1>
-      <p>This is the blog post content.</p>
+      <h1>{post.title.rendered}</h1>
+      <p dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
     </Layout>
   );
 };
 
-Post.getInitialProps = async function () {
-  const res = await fetch(`${url}/posts/5`);
-  const data = await res.json();
+Post.getInitialProps = async function (props) {
+  const { asPath } = props;
+  const id = asPath.split("id=")[1];
 
-  console.log(`Post data: ${data}`);
+  const res = await fetch(`${api}/posts/${id}`);
+  const data = await res.json();
 
   return {
     post: data,
