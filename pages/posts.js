@@ -6,7 +6,6 @@ import Layout from "../components/Layout";
 const api = process.env.WP_API;
 const apiV = process.env.API_V;
 const url = `${api}${apiV}`;
-console.log("URL:", url);
 
 const Posts = (props) => {
   return (
@@ -28,9 +27,6 @@ const Posts = (props) => {
 Posts.getInitialProps = async function () {
   const res = await fetch(`${url}/posts`);
   const data = await res.json();
-
-  console.log("Num Posts: ", data.length);
-  console.log(`Posts: ${data}`);
 
   return {
     posts: data.map((entry) => entry),

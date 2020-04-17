@@ -4,7 +4,6 @@ import Layout from "../../components/Layout";
 const wp = process.env.WP_API;
 const apiV = process.env.API_V;
 const api = `${wp}${apiV}`;
-console.log("Endpoint:", api);
 
 const Post = (props) => {
   const router = useRouter();
