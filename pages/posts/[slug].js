@@ -1,5 +1,5 @@
 import Layout from "../../components/Layout";
-import config from "./../config";
+import config from "./../../config";
 
 const { api } = config;
 
