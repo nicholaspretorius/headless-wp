@@ -1,8 +1,9 @@
 module.exports = () => {
   return {
     env: {
-      WP_API: "http://localhost:10000",
-      API_V: "/wp-json/wp/v2",
+      WP_URL: "http://localhost:10000",
+      WP_JSON: "wp-json",
+      API_V: "wp/v2",
     },
   };
 };

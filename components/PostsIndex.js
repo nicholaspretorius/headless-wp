@@ -4,7 +4,7 @@ import fetch from "isomorphic-unfetch";
 
 import config from "./../config";
 
-const { api } = config;
+const { api_posts } = config;
 
 class PostsIndex extends Component {
   static defaultProps = {
@@ -19,7 +19,9 @@ class PostsIndex extends Component {
 
   async componentDidMount() {
     const { limit, order, orderBy } = this.props;
-    const res = await fetch(`${api}/posts?per_page=${limit}&order=${order}&orderby=${orderBy}`);
+    const res = await fetch(
+      `${api_posts}/posts?per_page=${limit}&order=${order}&orderby=${orderBy}`
+    );
     const data = await res.json();
     this.setState({ posts: data.map((entry) => entry) });
   }
