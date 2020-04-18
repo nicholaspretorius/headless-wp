@@ -5,7 +5,7 @@ const Posts = () => {
   return (
     <Layout>
       <h3>Posts</h3>
-      <PostsIndex />
+      <PostsIndex limit="2" order="desc" />
     </Layout>
   );
 };

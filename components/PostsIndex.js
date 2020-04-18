@@ -7,12 +7,19 @@ import config from "./../config";
 const { api } = config;
 
 class PostsIndex extends Component {
+  static defaultProps = {
+    limit: 3,
+    order: "asc",
+    orderBy: "date",
+  };
+
   state = {
     posts: [],
   };
 
   async componentDidMount() {
-    const res = await fetch(`${api}/posts`);
+    const { limit, order, orderBy } = this.props;
+    const res = await fetch(`${api}/posts?per_page=${limit}&order=${order}&orderby=${orderBy}`);
     const data = await res.json();
     this.setState({ posts: data.map((entry) => entry) });
   }
