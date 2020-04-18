@@ -1,8 +1,7 @@
 import Layout from "../../components/Layout";
+import config from "./../config";
 
-const wp = process.env.WP_API;
-const apiV = process.env.API_V;
-const api = `${wp}${apiV}`;
+const { api } = config;
 
 const Post = (props) => {
   const { post } = props;

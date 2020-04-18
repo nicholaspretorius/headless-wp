@@ -2,10 +2,9 @@ import Link from "next/link";
 import fetch from "isomorphic-unfetch";
 
 import Layout from "../components/Layout";
+import config from "./../config";
 
-const api = process.env.WP_API;
-const apiV = process.env.API_V;
-const url = `${api}${apiV}`;
+const { api } = config;
 
 const Posts = (props) => {
   return (
@@ -25,7 +24,7 @@ const Posts = (props) => {
 };
 
 Posts.getInitialProps = async function () {
-  const res = await fetch(`${url}/posts`);
+  const res = await fetch(`${api}/posts`);
   const data = await res.json();
 
   return {
