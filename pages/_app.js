@@ -4,6 +4,7 @@ import App from "next/app";
 import Layout from "./../components/Layout";
 
 import config from "./../config";
+import "./../styles/styles.css";
 
 const { api } = config;
 
