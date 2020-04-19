@@ -17,4 +17,9 @@ The Next.js/React frontend client is running on:
 * `npm run dev`
 * [Client](http://localhost:3000)
 
+## TODO
+
+1. Move menus API call to _app
+2. Pull in WP page content dynamically
+3. Testing setup? 
 
