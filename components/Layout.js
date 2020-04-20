@@ -7,11 +7,11 @@ const layoutStyle = {
 };
 
 const Layout = (props) => {
-  const { title, description } = props;
+  const { title, description, menu_primary } = props;
 
   return (
     <div style={layoutStyle}>
-      <Header title={title} description={description} />
+      <Header title={title} description={description} menu_items={menu_primary} />
       {props.children}
     </div>
   );
